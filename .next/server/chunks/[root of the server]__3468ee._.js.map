@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 151, "column": 0}, "map": {"version":3,"sources":["file:///home/differenz157/Next-js-Project/app/query/route.ts"],"sourcesContent":["import { db } from \"@vercel/postgres\";\n\nconst client = await db.connect();\n\nasync function listInvoices() {\n\tconst data = await client.sql`\n    SELECT invoices.amount, customers.name\n    FROM invoices\n    JOIN customers ON invoices.customer_id = customers.id\n    WHERE invoices.amount = 666;\n  `;\n\n\treturn data.rows;\n}\n\nexport async function GET() {\n  // return Response.json({\n  //   message:\n  //     'Uncomment this file and remove this line. You can delete this file when you are finished.',\n  // });\n  try {\n  \treturn Response.json(await listInvoices());\n  } catch (error) {\n  \treturn Response.json({ error }, { status: 500 });\n  }\n}\n"],"names":[],"mappings":";;;AAAA;AAAA;;AAEA,MAAM,SAAS,MAAM,mLAAA,CAAA,KAAE,CAAC,OAAO;AAE/B,eAAe;IACd,MAAM,OAAO,MAAM,OAAO,GAAG,CAAC;;;;;EAK7B,CAAC;IAEF,OAAO,KAAK,IAAI;AACjB;AAEO,eAAe;IACpB,yBAAyB;IACzB,aAAa;IACb,mGAAmG;IACnG,MAAM;IACN,IAAI;QACH,OAAO,SAAS,IAAI,CAAC,MAAM;IAC5B,EAAE,OAAO,OAAO;QACf,OAAO,SAAS,IAAI,CAAC;YAAE;QAAM,GAAG;YAAE,QAAQ;QAAI;IAC/C;AACF"}},
-    {"offset": {"line": 182, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
