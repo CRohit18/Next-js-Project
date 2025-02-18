@@ -1,1 +1,1 @@
-{"/query/route":"/query","/seed/route":"/seed","/_not-found/page":"/_not-found","/page":"/","/dashboard/invoices/page":"/dashboard/invoices","/dashboard/(overview)/page":"/dashboard","/dashboard/customers/page":"/dashboard/customers"}
+{"/query/route":"/query","/seed/route":"/seed","/page":"/","/dashboard/(overview)/page":"/dashboard","/dashboard/customers/page":"/dashboard/customers","/dashboard/invoices/page":"/dashboard/invoices","/_not-found/page":"/_not-found"}
